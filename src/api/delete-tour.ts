@@ -4,7 +4,7 @@ import { TourData } from "../types/Tour/index.types";
 export const deleteTour = async (tourId: string): Promise<TourData | null> => {
     try {
       const { data, error } = await supabase
-        .from("tours")
+        .from("aveji")
         .delete()
         .eq("id", tourId)
         .select()

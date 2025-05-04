@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import type { RcFile, UploadProps } from "antd/es/upload";
 import type { UploadChangeParam, UploadFile } from "antd/es/upload/interface";
 import { Form, message } from "antd";
-import dayjs from "dayjs";
 import { TourFormProps } from "..";
 import { TourData } from "../../../types/Tour/index.types";
 
@@ -44,6 +43,7 @@ const useTourFormLogic = ({ onSubmit, initialValues }: TourFormProps) => {
   const handleSubmit = async () => {
     try {
       const values = await form.validateFields();
+      console.log(values)
       let file: File | undefined;
       if (fileList.length > 0 && fileList[0].originFileObj) {
         file = fileList[0].originFileObj as File;
@@ -61,10 +61,6 @@ const useTourFormLogic = ({ onSubmit, initialValues }: TourFormProps) => {
         title: initialValues.title,
         description: initialValues.description,
         price: initialValues.price,
-        start_date: initialValues.start_date
-          ? dayjs(initialValues.start_date)
-          : null,
-        end_date: initialValues.end_date ? dayjs(initialValues.end_date) : null,
         image_url: initialValues.image_url,
       });
       setImageUrl(initialValues.image_url);

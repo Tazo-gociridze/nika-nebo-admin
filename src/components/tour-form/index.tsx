@@ -3,7 +3,6 @@ import {
   Form,
   Input,
   Button,
-  DatePicker,
   InputNumber,
   Upload,
   Image,
@@ -58,20 +57,20 @@ const TourForm: React.FC<TourFormProps> = ({
       >
         <InputNumber style={{ width: "100%" }} />
       </Form.Item>
-      <Form.Item
+      {/* <Form.Item
         label="Start Date"
         name="start_date"
         rules={[{ required: true, message: "Please input the start date!" }]}
       >
         <DatePicker style={{ width: "100%" }} />
-      </Form.Item>
-      <Form.Item
+      </Form.Item> */}
+      {/* <Form.Item
         label="End Date"
         name="end_date"
         rules={[{ required: true, message: "Please input the end date!" }]}
       >
         <DatePicker style={{ width: "100%" }} />
-      </Form.Item>
+      </Form.Item> */}
       <Form.Item
         label="Image"
         name="image"

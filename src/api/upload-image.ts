@@ -13,7 +13,7 @@ export const uploadImage = async (file: File): Promise<UploadImageResponse> => {
       const fileName = `${uuidv4()}.${fileExt}`;
   
       const { data, error } = await supabase.storage
-        .from("tour_images")
+        .from("aveji-images")
         .upload(fileName, file, {
           cacheControl: "3600",
           upsert: false,

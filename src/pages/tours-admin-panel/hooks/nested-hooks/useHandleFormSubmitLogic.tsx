@@ -4,7 +4,6 @@ import { updateTour } from "../../../../api/update-tour";
 import { createTour } from "../../../../api/create-tour";
 import { TourData } from "../../../../types/Tour/index.types";
 import { message } from "antd";
-import dayjs from "dayjs";
 import { GET_TOURS_QUERY_KEY } from "../../../../react-query/query/enum";
 import { TOURS_MUTATIONS_KEYS } from "./enum";
 
@@ -53,9 +52,9 @@ const useHandleFormSubmitLogic = () => {
       const tourData: TourData = {
         ...rest,
         image_url: imageUrl,
-        start_date: values.start_date ? dayjs(values.start_date) : null,
-        end_date: values.end_date ? dayjs(values.end_date) : null,
-    };
+      };
+      
+      console.log(tourData)
       if (id) {
         if (!id) {
           throw new Error("Invalid Tour ID for update");

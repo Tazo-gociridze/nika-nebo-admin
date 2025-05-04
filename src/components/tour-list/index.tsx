@@ -38,29 +38,29 @@ const TourList: React.FC<TourListProps> = React.memo(({
       width: 100,
       responsive: ["lg"],
     },
-    {
-      title: "Start Date",
-      dataIndex: "start_date",
-      key: "start_date",
-       render: (date: Date | null | undefined) => {
-              if (date instanceof Date) {
-                  return date.toLocaleDateString();
-              }
-              return 'N/A';
-       },
-    },
-    {
-      title: "End Date",
-      dataIndex: "end_date",
-      key: "end_date",
-       render: (date: Date | null | undefined) => {
-           if (date instanceof Date) {
-               return date.toLocaleDateString();
-           }
-           return 'N/A'
-       },
-      responsive: ["md"],
-    },
+    // {
+    //   title: "Start Date",
+    //   dataIndex: "start_date",
+    //   key: "start_date",
+    //    render: (date: Date | null | undefined) => {
+    //           if (date instanceof Date) {
+    //               return date.toLocaleDateString();
+    //           }
+    //           return 'N/A';
+    //    },
+    // },
+    // {
+    //   title: "End Date",
+    //   dataIndex: "end_date",
+    //   key: "end_date",
+    //    render: (date: Date | null | undefined) => {
+    //        if (date instanceof Date) {
+    //            return date.toLocaleDateString();
+    //        }
+    //        return 'N/A'
+    //    },
+    //   responsive: ["md"],
+    // },
     {
       title: "Action",
       key: "action",

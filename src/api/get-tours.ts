@@ -4,7 +4,7 @@ import { supabase } from "../lib/supabaseClient";
 export const getTours = async (): Promise<TourData[] | null> => {
   try {
     const { data, error } = await supabase
-      .from("tours")
+      .from("aveji")
       .select("*")
       .order("created_at", { ascending: false });
 

@@ -3,10 +3,11 @@ import { supabase } from "../lib/supabaseClient";
 
 export const updateTour = async (
     tourData: TourData,
-  ): Promise<TourData | null> => {
+): Promise<TourData | null> => {
+  console.log(tourData)
     try {
       const { data, error } = await supabase
-        .from("tours")
+        .from("aveji")
         .update(tourData)
         .eq("id", tourData.id)
         .select()

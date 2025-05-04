@@ -4,9 +4,11 @@ import { TourData } from "../types/Tour/index.types";
 export const createTour = async (
   tourData: TourData
 ): Promise<TourData | null> => {
+
+  console.log(tourData)
   try {
     const { data, error } = await supabase
-      .from("tours")
+      .from("aveji")
       .insert([tourData])
       .select()
       .single();
